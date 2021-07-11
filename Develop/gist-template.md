@@ -33,7 +33,13 @@ As explained above, `name@email.coooooom` will not be validated because it did n
 The email match expression example happens to have a `character class` of `/d`, which acts as known as the `digit character class`. For example, in the section `[\da-z\.-]`, it will find any single digit as well as characters `a-z`.
 
 ### Grouping and Capturing
+When we are required to return certain sets of data, we utilize `Groups`. In our email validator, there are 3 parts that are called by RegEx:
 
+- Username: `([a-z0-9_\.-]+)`
+- Domain: `@([\da-z\.-]+)`
+- Extension: `.([a-z\.]{2,6})`
+
+Each one of these parts are their own `Group` and are `captured` together in order to make a string.
 
 ### Bracket Expressions
 
