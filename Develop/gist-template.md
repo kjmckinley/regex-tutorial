@@ -42,15 +42,15 @@ When we are required to return certain sets of data, we utilize `Groups`. In our
 Each one of these parts are their own `Group` and are `captured` together in order to make a string.
 
 ### Bracket Expressions
+If we take a closer looks at the `Groups` mentioned above, we can see that `Bracket Expressions` can be found. So if we look at the `username` portion of the example RegEx above, `([a-z0-9_\.-]+)` contains the bracket expression: `[a-z0-9_\.-]`.
+
+Expressions like this are used to locate matching or invalid sets of data like letters, special characters or numbers.
+
+For Example: `a-z` is searching the string for lower-cased letters. `0-9` searches for digits. `_` searches for specifically underscores and `\.` is searching for periods in the string. This `\` is required to find a period because it needs to be found and `captured`. This is know as `escaping` a character and making it into a `literal`.
 
 ### Greedy and Lazy Match
-
-### Boundaries
-
-### Back-references
-
-### Look-ahead and Look-behind
+Inside this particular example we can see that its groups are using a `Greedy Match` method. This is denoted by the `+` symbol, and allows the expression to discover the largest possible match. This can be veiwed as yet another quantifier. In the `extention` group we can see that instead of `+` it  is using `{2,6}`.
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Kyle is a Full Stack Web Developer who is expanding his skills on coding through practice and resources.Checkout his github at: [github link](https://github.com/kjmckinley/regex-tutorial.git) 
