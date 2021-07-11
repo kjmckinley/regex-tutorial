@@ -25,9 +25,10 @@ Snippet:  `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 ## Regex Components
 
 ### Anchors
-Characters that are within a Regular Expression that target as well as denote the beginning and end of a set of strings are called Anchors. For instance, the `^` character in the above example will match the beginning of the target string, while the `$` will match the end of the target sting. To further explain the functionality of these anchors, say we took 2 different emails, `name@email.com` and `name@email.coooom` and tried to validate them using the above Regular Expression (`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`), only `name@email.com` would be validated since it is within the parameters or `Qualifiers` in the expression.
+Characters that are within a Regular Expression that target as well as denote the beginning and end of a set of strings are called Anchors. For instance, the `^` character in the above example will match the beginning of the target string, while the `$` will match the end of the target sting. To further explain the functionality of these anchors, say we took 2 different emails, `name@email.com` and `name@email.coooooom` and tried to validate them using the above Regular Expression (`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`), only `name@email.com` would be validated since it is within the given parameters or `quantifiers` in the expression.
 
 ### Quantifiers
+As explained above, `name@email.coooooom` will not be validated because it did not fully satisfy or match the quantifiers in the given expression. If we look at this expression closely, we can see that these are not a randomly allocated group of characters, but that each one will gives certain instructions for what is required when searching and validating a given string. For instance, the expression `{2,6}` is a `quantifier`that tells the expression that says that the section after the period must be between 2 and 6 characters in order to validate. Looking at the email that will not validate, is is clear to see that `.coooooom` has 8 characters and is therefore not accepted by the quantifier.
 
 ### OR Operator
 
