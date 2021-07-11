@@ -12,7 +12,6 @@ Snippet:  `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
-- [OR Operator](#or-operator)
 - [Character Classes](#character-classes)
 - [Flags](#flags)
 - [Grouping and Capturing](#grouping-and-capturing)
@@ -30,13 +29,11 @@ Characters that are within a Regular Expression that target as well as denote th
 ### Quantifiers
 As explained above, `name@email.coooooom` will not be validated because it did not fully satisfy or match the quantifiers in the given expression. If we look at this expression closely, we can see that these are not a randomly allocated group of characters, but that each one will gives certain instructions for what is required when searching and validating a given string. For instance, the expression `{2,6}` is a `quantifier`that tells the expression that says that the section after the period must be between 2 and 6 characters in order to validate. Looking at the email that will not validate, is is clear to see that `.coooooom` has 8 characters and is therefore not accepted by the quantifier.
 
-### OR Operator
-
 ### Character Classes
-
-### Flags
+The email match expression example happens to have a `character class` of `/d`, which acts as known as the `digit character class`. For example, in the section `[\da-z\.-]`, it will find any single digit as well as characters `a-z`.
 
 ### Grouping and Capturing
+
 
 ### Bracket Expressions
 
